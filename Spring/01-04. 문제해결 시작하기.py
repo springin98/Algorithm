@@ -9,6 +9,9 @@ split() : 쪼갤 때 사용한다.
 빠른 입출력 : input() 대신 sys.stdin.readline() 을 사용한다.
 수십 만 개의 데이터를 입력받아야 하는 문제라도 그 데이터가 전부 한 줄에 주어지면 input()을 한 번만 호출하므로 굳이 빠른 입출력이 필요없다.
 
+한 줄에 한 번에 받을 때
+map(int, sys.stdin.readline().strip().split())
+
 2. 자료형
 Python은 변수에 담을 수 있는 범위를 초과하면 오버플로우를 발생시키지 않고 내부적으로 알아서 더 큰 자료형으로 변환시켜 줍니다.
 즉, 오버플로우를 신경쓰지 않아도 됩니다.
@@ -72,3 +75,9 @@ https://wikidocs.net/22805
 5. 삼항 연산자
 - 코드가 간략해진다.
 print("짝수" if num % 2 == 0 else "홀수")
+
+print ('<') if A < B else print('>') if A > B else print('==')
+
+6. \ ` 출력
+print("\\") => \
+print("\"") => "
