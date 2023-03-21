@@ -1,8 +1,8 @@
-import sys
+from sys import stdin
 
-N = int(sys.stdin.readline().strip())
-numbers = list(map(int, sys.stdin.readline().strip().split()))
-V = int(sys.stdin.readline().strip())
+N = int(stdin.readline())
+numbers = list(map(int, stdin.readline().split()))
+V = int(stdin.readline())
 
 print(numbers.count(V))
 
