@@ -1,12 +1,11 @@
 def solution(n):
+    k = 2
     answer = []
-    
-    x = 2
-    while x <= n:
-        if n % x == 0:
-            if x not in answer:
-                answer.append(x)
-            n //= x
-        else:
-            x += 1
+    while n>1:
+        if n%k==0:
+            answer.append(k)
+            while n%k==0:
+                n//=k
+        k+=1
+
     return answer
